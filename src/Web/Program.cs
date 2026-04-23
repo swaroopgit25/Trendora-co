@@ -85,7 +85,14 @@ builder.Services.Configure<ServiceConfig>(config =>
 builder.Services.AddBlazor(builder.Configuration);
 
 builder.Services.AddMetronome();
-builder.AddSeqEndpoint(connectionName: "seq");
+var seqUrl = builder.Configuration["Aspire:Seq:ServerUrl"] ?? builder.Configuration["Seq:ServerUrl"];
+if (!string.IsNullOrWhiteSpace(seqUrl))
+{
+    builder.AddSeqEndpoint(connectionName: "seq", options =>
+    {
+        options.ServerUrl = seqUrl;
+    });
+}
 
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -128,4 +135,3 @@ app.MapFallbackToFile("index.html");
 
 app.Logger.LogInformation("LAUNCHING");
 app.Run();
-

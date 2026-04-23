@@ -49,12 +49,14 @@ builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);
 builder.Services.AddSwagger();
 
 builder.Services.AddMetronome();
-string seqUrl = builder.Configuration["Seq:ServerUrl"] ?? "http://localhost:5341";
-
-builder.AddSeqEndpoint(connectionName: "seq", options =>
+var seqUrl = builder.Configuration["Aspire:Seq:ServerUrl"] ?? builder.Configuration["Seq:ServerUrl"];
+if (!string.IsNullOrWhiteSpace(seqUrl))
 {
-    options.ServerUrl = seqUrl;
-});
+    builder.AddSeqEndpoint(connectionName: "seq", options =>
+    {
+        options.ServerUrl = seqUrl;
+    });
+}
 
 var app = builder.Build();
 
