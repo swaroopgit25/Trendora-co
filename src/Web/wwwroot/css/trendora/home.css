@@ -1,0 +1,825 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+.trendora-home {
+    --trendora-ink: #0a0a0f;
+    --trendora-soft-ink: #a0a0b0;
+    --trendora-accent: #ff4d4d;
+    --trendora-accent-deep: #cc0000;
+    --trendora-cream: #f8f2e9;
+    --trendora-paper: #14141a;
+    --trendora-stroke: #2a2a35;
+    --trendora-highlight: #ffd700;
+    margin: 0 auto;
+    max-width: 1320px;
+    padding: 1.1rem 1rem 3rem;
+    font-family: "Manrope", "Segoe UI", sans-serif;
+    color: #ffffff;
+    background: var(--trendora-ink);
+}
+
+.trendora-home a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.trendora-reveal {
+    opacity: 0;
+    transform: translateY(-28px);
+    transition: opacity 0.6s ease, transform 0.7s ease;
+}
+
+.trendora-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.trendora-announcement {
+    background: linear-gradient(90deg, #ff4d4d 0%, #ff6b6b 50%, #ff4d4d 100%);
+    border-radius: 999px;
+    color: #fff;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+.trendora-announcement-window {
+    height: 2.4rem;
+    overflow: hidden;
+}
+
+.trendora-announcement-track {
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.55s ease;
+}
+
+.trendora-announcement-track p {
+    align-items: center;
+    display: flex;
+    font-size: 0.9rem;
+    font-weight: 600;
+    height: 2.4rem;
+    letter-spacing: 0.02em;
+    margin: 0;
+    justify-content: center;
+}
+
+.trendora-nav {
+    align-items: center;
+    background: var(--trendora-paper);
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem 1rem;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    padding: 0.7rem 0.9rem;
+}
+
+.trendora-logo {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0.45rem;
+}
+
+.trendora-logo-image {
+    display: block;
+    height: 104px;
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+    width: 104px;
+}
+
+.trendora-logo--header .trendora-logo-image {
+    height: 100px;
+    width: 100px;
+}
+
+.trendora-logo--nav .trendora-logo-image {
+    height: 92px;
+    width: 92px;
+}
+
+.trendora-logo-mark {
+    align-items: center;
+    background: linear-gradient(135deg, #ff4d4d 0%, #cc0000 100%);
+    border-radius: 999px;
+    color: #fff;
+    display: inline-flex;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 2.15rem;
+    justify-content: center;
+    width: 2.15rem;
+}
+
+.trendora-logo-text {
+    color: #ffffff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+}
+
+.trendora-nav-links {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+
+.trendora-nav-links a {
+    background: #1e1e28;
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 999px;
+    color: #a0a0b0;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.45rem 0.9rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.trendora-nav-links a:hover {
+    background: var(--trendora-accent);
+    border-color: var(--trendora-accent);
+    color: #fff;
+}
+
+.trendora-nav-secondary {
+    background: transparent;
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 999px;
+    color: #a0a0b0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.55rem 1rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.trendora-nav-secondary:hover {
+    background: var(--trendora-highlight);
+    border-color: var(--trendora-highlight);
+    color: #000;
+}
+
+.trendora-basket-button {
+    background: linear-gradient(135deg, var(--trendora-accent), var(--trendora-accent-deep));
+    border-radius: 999px;
+    color: #fff !important;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    padding: 0.55rem 1rem;
+    text-transform: uppercase;
+}
+
+.trendora-hero {
+    background: radial-gradient(ellipse at 30% 20%, #1a1a24 0%, #0a0a0f 60%, #050508 100%);
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 20px;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    padding: 1.3rem;
+}
+
+.trendora-hero-copy {
+    align-self: center;
+}
+
+.trendora-eyebrow {
+    color: var(--trendora-accent);
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    margin: 0 0 0.4rem;
+    text-transform: uppercase;
+}
+
+.trendora-hero h1 {
+    color: #ffffff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: clamp(1.9rem, 4vw, 3rem);
+    line-height: 1.02;
+    margin-bottom: 0.65rem;
+}
+
+.trendora-subtitle {
+    color: var(--trendora-soft-ink);
+    margin-bottom: 1rem;
+    max-width: 45ch;
+}
+
+.trendora-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+.trendora-hero-actions a {
+    border-radius: 999px;
+    font-size: 0.84rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    padding: 0.6rem 1rem;
+    text-transform: uppercase;
+}
+
+.trendora-hero-actions a:first-child {
+    background: linear-gradient(135deg, var(--trendora-accent), var(--trendora-accent-deep));
+    color: #fff;
+}
+
+.trendora-hero-actions a:last-child {
+    background: transparent;
+    border: 1px solid var(--trendora-stroke);
+    color: #ffffff;
+}
+
+.trendora-hero-actions a:last-child:hover {
+    border-color: var(--trendora-accent);
+    color: var(--trendora-accent);
+}
+
+.trendora-hero-stats {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--trendora-stroke);
+}
+
+.trendora-hero-stats article {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.trendora-hero-stats strong {
+    color: var(--trendora-highlight);
+    font-size: 1.1rem;
+    font-weight: 800;
+}
+
+.trendora-hero-stats span {
+    color: var(--trendora-soft-ink);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.trendora-hero-visual {
+    display: none;
+}
+
+.trendora-collections,
+.trendora-search-panel,
+.trendora-manage-products,
+.trendora-products,
+.trendora-status-message {
+    background: var(--trendora-paper);
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.trendora-collections header,
+.trendora-products-header {
+    align-items: baseline;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem 1rem;
+    justify-content: space-between;
+    margin-bottom: 0.8rem;
+}
+
+.trendora-collections h2,
+.trendora-search-panel h2,
+.trendora-manage-products h2,
+.trendora-products-header h2 {
+    color: #ffffff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.trendora-collections p,
+.trendora-products-header p {
+    color: var(--trendora-soft-ink);
+    margin: 0;
+}
+
+.trendora-section-kicker {
+    color: var(--trendora-accent);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    margin: 0 0 0.4rem;
+    text-transform: uppercase;
+}
+
+.trendora-collection-grid {
+    display: grid;
+    gap: 0.65rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.trendora-collection-card {
+    background: linear-gradient(150deg, #1e1e28, #14141a);
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 12px;
+    color: #ffffff;
+    display: grid;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    gap: 0.2rem;
+    min-height: 86px;
+    padding: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.trendora-collection-card strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.trendora-collection-card span {
+    color: var(--trendora-accent);
+    font-family: "Manrope", "Segoe UI", sans-serif;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.13em;
+}
+
+.trendora-collection-card:hover {
+    transform: translateY(-2px);
+    border-color: var(--trendora-accent);
+}
+
+.trendora-collection-card--tshirts,
+.trendora-collection-card--bottoms,
+.trendora-collection-card--jackets {
+    align-content: end;
+    color: #fff;
+    min-height: 250px;
+    overflow: hidden;
+    position: relative;
+}
+
+.trendora-collection-card--tshirts::after,
+.trendora-collection-card--bottoms::after,
+.trendora-collection-card--jackets::after {
+    background: linear-gradient(0deg, rgba(10, 10, 15, 0.95) 0%, rgba(10, 10, 15, 0.6) 50%, rgba(10, 10, 15, 0.1) 100%);
+    content: "";
+    inset: 0;
+    position: absolute;
+}
+
+.trendora-collection-image {
+    object-fit: cover;
+    width: 100%;
+}
+
+.trendora-collection-mosaic {
+    display: grid;
+    gap: 0.25rem;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    inset: 0;
+    position: absolute;
+    z-index: 0;
+}
+
+.trendora-collection-mosaic img {
+    height: 100%;
+    min-height: 78px;
+}
+
+.trendora-collection-mosaic img:first-child {
+    grid-column: span 2;
+    grid-row: span 2;
+    min-height: 160px;
+}
+
+.trendora-collection-card--tshirts span,
+.trendora-collection-card--tshirts strong,
+.trendora-collection-card--bottoms span,
+.trendora-collection-card--bottoms strong,
+.trendora-collection-card--jackets span,
+.trendora-collection-card--jackets strong {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+}
+
+.trendora-collection-card--tshirts span,
+.trendora-collection-card--bottoms span,
+.trendora-collection-card--jackets span {
+    font-size: 0.68rem;
+}
+
+.trendora-collection-content {
+    position: relative;
+    z-index: 1;
+}
+
+.trendora-search-panel h2 {
+    margin-bottom: 0.7rem;
+}
+
+.trendora-search {
+    display: grid;
+    gap: 0.65rem;
+    grid-template-columns: 1.6fr 1fr 1fr auto;
+}
+
+.trendora-search input,
+.trendora-search select,
+.trendora-search button,
+.trendora-manage-form input,
+.trendora-manage-form select,
+.trendora-manage-form button {
+    background: #1e1e28;
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 10px;
+    color: #ffffff;
+    min-height: 2.65rem;
+    padding: 0.56rem 0.75rem;
+}
+
+.trendora-search input::placeholder {
+    color: var(--trendora-soft-ink);
+}
+
+.trendora-search input:focus,
+.trendora-search select:focus {
+    border-color: var(--trendora-accent);
+    outline: none;
+}
+
+.trendora-search select option {
+    background: #1e1e28;
+}
+
+.trendora-search button,
+.trendora-manage-form button {
+    background: linear-gradient(135deg, var(--trendora-accent), var(--trendora-accent-deep));
+    color: #fff;
+    font-weight: 800;
+}
+
+.trendora-search button:hover,
+.trendora-manage-form button:hover {
+    opacity: 0.9;
+}
+
+.trendora-status-message {
+    border-color: #2a4a2a;
+    color: #4ade80;
+    font-weight: 600;
+    background: rgba(74, 222, 128, 0.1);
+}
+
+.trendora-manage-products p {
+    color: var(--trendora-soft-ink);
+    margin-bottom: 0.55rem;
+}
+
+.trendora-manage-form {
+    display: grid;
+    gap: 0.65rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.trendora-manage-form button {
+    grid-column: span 2;
+}
+
+.trendora-rail-controls {
+    display: flex;
+    gap: 0.4rem;
+    justify-content: flex-end;
+    margin-bottom: 0.55rem;
+}
+
+.trendora-rail-controls button {
+    background: #1e1e28;
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 999px;
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 2rem;
+    width: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.trendora-rail-controls button:hover {
+    background: var(--trendora-accent);
+    border-color: var(--trendora-accent);
+}
+
+.trendora-product-scroller {
+    display: flex;
+    gap: 0.9rem;
+    overflow-x: auto;
+    padding-bottom: 0.3rem;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+}
+
+.trendora-product-slide {
+    flex: 0 0 min(350px, 80vw);
+    scroll-snap-align: start;
+}
+
+.trendora-product-slide .product-form {
+    background: #1e1e28;
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 12px;
+    min-height: 100%;
+    padding: 0.8rem;
+}
+
+.trendora-product-slide .esh-catalog-thumbnail {
+    border-radius: 10px;
+    height: 330px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.trendora-product-slide .esh-catalog-button {
+    background: linear-gradient(135deg, var(--trendora-accent), var(--trendora-accent-deep));
+    border-radius: 9px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    height: 2.5rem;
+    letter-spacing: 0.05em;
+    margin-top: 0.7rem;
+    text-transform: uppercase;
+    width: 100%;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    transition: opacity 0.3s ease;
+}
+
+.trendora-product-slide .esh-catalog-button:hover {
+    opacity: 0.9;
+}
+
+.trendora-product-slide .esh-catalog-name {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-top: 0.55rem;
+    text-transform: none;
+}
+
+.trendora-product-slide .esh-catalog-price {
+    color: var(--trendora-highlight);
+    font-size: 1.65rem;
+    font-weight: 800;
+}
+
+.product-options {
+    border-top: 1px dashed var(--trendora-stroke);
+    font-size: 0.82rem;
+    margin-top: 0.6rem;
+    padding-top: 0.6rem;
+}
+
+.option-group {
+    margin-bottom: 0.4rem;
+}
+
+.option-label {
+    color: var(--trendora-soft-ink);
+    display: block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+}
+
+.option-item {
+    display: inline-block;
+    margin-right: 0.45rem;
+}
+
+.option-item label {
+    cursor: pointer;
+}
+
+.option-price {
+    color: var(--trendora-soft-ink);
+    font-size: 0.86em;
+}
+
+.trendora-no-results {
+    background: rgba(255, 77, 77, 0.1);
+    border: 1px dashed var(--trendora-accent);
+    border-radius: 12px;
+    color: var(--trendora-accent);
+    padding: 1.1rem;
+    text-align: center;
+}
+
+.trendora-style-note {
+    background: var(--trendora-paper);
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 16px;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.trendora-style-note h2 {
+    color: #ffffff;
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem;
+}
+
+.trendora-style-note p {
+    color: var(--trendora-soft-ink);
+    margin: 0 0 0.75rem;
+}
+
+.trendora-style-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.trendora-style-tags a {
+    background: #1e1e28;
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 999px;
+    color: var(--trendora-soft-ink);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.45rem 0.9rem;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.trendora-style-tags a:hover {
+    background: var(--trendora-accent);
+    border-color: var(--trendora-accent);
+    color: #fff;
+}
+
+.trendora-discovery-grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+}
+
+.trendora-hero-note {
+    background: var(--trendora-accent);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    padding: 0.3rem 0.6rem;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.trendora-hero-note--top {
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.trendora-hero-note--bottom {
+    bottom: 0.5rem;
+    left: 0.5rem;
+}
+
+.trendora-hero-card {
+    background: var(--trendora-paper);
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 12px;
+    padding: 0.75rem;
+}
+
+.trendora-hero-card--feature {
+    position: relative;
+}
+
+.trendora-card-kicker {
+    color: var(--trendora-accent);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.trendora-hero-card strong {
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.trendora-hero-card img {
+    border-radius: 8px;
+    width: 100%;
+}
+
+.trendora-nav-secondary {
+    background: transparent;
+    border: 1px solid var(--trendora-stroke);
+    border-radius: 999px;
+    color: #a0a0b0;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    padding: 0.55rem 1rem;
+    text-transform: uppercase;
+}
+
+.trendora-nav-actions {
+    display: flex;
+    gap: 0.5rem;
+}
+
+@media (max-width: 1080px) {
+    .trendora-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .trendora-collection-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .trendora-discovery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 860px) {
+    .trendora-search {
+        grid-template-columns: 1fr;
+    }
+
+    .trendora-manage-form {
+        grid-template-columns: 1fr;
+    }
+
+    .trendora-manage-form button {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 640px) {
+    .trendora-home {
+        padding-left: 0.7rem;
+        padding-right: 0.7rem;
+    }
+
+    .trendora-announcement-track p {
+        font-size: 0.76rem;
+    }
+
+    .trendora-nav-links a {
+        font-size: 0.74rem;
+    }
+
+    .trendora-logo--header .trendora-logo-image,
+    .trendora-logo--nav .trendora-logo-image {
+        height: 72px;
+        width: 72px;
+    }
+
+    .trendora-collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trendora-hero-stats {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+}

@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+
+namespace Trendora.PublicApi.UserManagementEndpoints.Models;
+
+public class GetUserRolesResponse : BaseResponse
+{
+
+    public GetUserRolesResponse(Guid correlationId) : base(correlationId)
+    {
+    }
+
+    public GetUserRolesResponse()
+    {
+    }
+
+    public List<string> Roles {  get; set; }
+}
+
